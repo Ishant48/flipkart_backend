@@ -10,7 +10,7 @@ app.use(cors());
 app.use(bodyParser.json({extended:true}));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use('/',router)
-const PORT = 8000
+const PORT = process.env.PORT | 8000;
 
 app.listen(PORT, ()=>{
     console.log(`Server is Running on ${PORT}`);
